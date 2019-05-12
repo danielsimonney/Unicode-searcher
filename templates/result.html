@@ -1,0 +1,22 @@
+{% extends "style.html" %}
+{% block content %}
+  <h3> Page de recherche général</h3>
+  <br>
+   
+   {% for i in range(0, height) %} 
+   <table class='table table-hover table-dark'>
+   
+            <tr>
+               <td colspan='2'><a href="/unicode/{{Alldatas[i]['number']}}">{{Alldatas[i]['unicode']}}</a></td>
+            </tr>
+            <tr>
+               <td> Nom </th>
+               <td><a href="/unicode/{{Alldatas[i]['number']}}"> {{Alldatas[i]['name']}} </a></td>
+            </tr>
+            
+         
+         </table>
+   {% endfor %} 
+   <button class="btn btn-success btn-lg btn-block"><a href="http://localhost:5000/search">Retournez à la page de recherche</a></button>
+   
+{% endblock %}

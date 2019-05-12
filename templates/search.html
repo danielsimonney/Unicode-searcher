@@ -1,0 +1,47 @@
+{% extends "style.html" %}
+{% block content %}
+<p>Afin de trouver un caractère unicode , faites une recherche avec l'inpu en dessous puis cliquer sur search.</p>
+<p>Vous pouvez effectuer une recherche sur : </p>
+<ul>
+    <li>Ce qu'un caractère unicode contient dans son nom</li>
+    <li>Son caractère unicode</li>
+    <li>Son point de code en hexadécimal</li>
+    <li>Son point de code en décimal</li>
+</ul>
+<p> Voici quelques exemples de ce qu'es un caractère unicode, cliquez dessus si vous voulez faire une recherche : </p>
+<table border="2px" class="uniSearch">
+<tr>
+  <td><a href="http://localhost:5000/search/?q=ƻ">ƻ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ǉ">ǉ</a></td>
+  <td><a href="http://localhost:5000/search/?q=Ǚ">Ǚ</a></td>
+  <td><a href="http://localhost:5000/search/?q=Ƿ">Ƿ</a></td>
+</tr>
+<tr>
+  <td><a href="http://localhost:5000/search/?q=Ⱥ">Ⱥ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ɺ">ɺ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ʖ">ʖ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ʥ">ʥ</a></td>
+</tr>
+<tr>
+  <td><a href="http://localhost:5000/search/?q=ʜ">ʜ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ˇ">ˇ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ʯ">ʯ</a></td>
+  <td><a href="http://localhost:5000/search/?q=ʬ">ʬ</a></td>
+</tr>
+<tr>
+  <td><a href="http://localhost:5000/search/?q=ͻ">ͻ</a></td>
+  <td><a href="http://localhost:5000/search/?q=Ϳ">Ϳ</a></td>
+  <td><a href="http://localhost:5000/search/?q=Ϭ">Ϭ</a></td>
+  <td><a href="http://localhost:5000/search/?q=Ϙ">Ϙ</a></td>
+</tr>
+</table>
+  <form action="http://localhost:5000/search" method = "GET">
+<div>Et taper dans le champ en dessous pour faire une recherche spécifique.</div>
+        <div class="form-group">
+          <input type="text" name="q" placeholder="type your ressearch">
+        </div>
+        <button type="submit" class="btn btn-outline-warning">Recherche</button>
+      </form>
+      <button class="btn btn-success btn-lg btn-block"><a href="http://localhost:5000">Retournez à la page d'accueil</a></button>
+
+{% endblock %}

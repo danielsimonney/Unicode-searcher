@@ -1,0 +1,31 @@
+{% extends "style.html" %}
+{% block content %}
+    <p class='h2'> Flask project</p>
+   
+    
+  
+    <p>Bienvenue sur mon site de recherche de caractères unicodes ou vous pourrez recherchez des caractères unicodes en fonction de 
+      différents critères . Celui-ci est réalisé en Flask qui est un framework de python avec bootstrap pour le visuel qui est un framework CSS.</p>
+      
+<div>Voici les différentes informations d'un caractère unicode : </div>
+<ul>
+    <li>Son caractère</li>
+    <li>Son nom</li>
+    <li>Son point de code en hexadécimal</li>
+    <li>Son point de code en décimal</li>
+    <li>Sa catégorie</li>
+</ul>
+
+<p> Voici quelques exemples de recherches possibles unicodes : </p>
+<ul class="list-group">
+  <li class="list-group-item"><a href="http://localhost:5000/search/?q=55">Le caractère unicode n°55</a></li>
+  <li class="list-group-item"><a href="http://localhost:5000/search/?q=HEART">Tous les caractères avec un coeur dans leur nom</a></li>
+  <li class="list-group-item"><a href="http://localhost:5000/search/?q=Ż">Le caractère unicode Ż</a></li>
+  <li class="list-group-item"><a href="http://localhost:5000/search/?q=U%2B1F354">Le caractère unicode de point de code hexa U+1f354</a></li>
+
+</ul>
+  <div>
+    Pour faire une recherche il faut vous rendre vers la page de recherche en cliquant sur le boutton situé juste en dessous
+  </div>
+  <button class="btn btn-success btn-lg btn-block"><a href='http://localhost:5000/search/'>Cliquer pour aller vers la page de recherche</a></button>
+{% endblock %}

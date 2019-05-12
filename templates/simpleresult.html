@@ -1,0 +1,29 @@
+{% extends "style.html" %}
+{% block content %}
+  <h3> Page d'affichage Unicode</h3>
+  <br>
+   <table class="table table-hover table-dark ">
+      <tr>
+         <td> Affichage </th>
+         <td> {{ unicode }}</td>
+      </tr>
+      <tr>
+         <td> Nom </th>
+         <td> {{ name }}</td>
+      </tr>
+      <tr>
+         <td> Point de code décimal </th>
+         <td> {{ number }} </td>
+      </tr>
+      <tr >
+         <td> Point de code Hexa </th>
+         <td> {{ hexa }} </td>
+      </tr>
+      <tr>
+         <td> Category </th>
+         <td> {{ cat }} </td>
+      </tr>
+   </table>
+   <button class="btn btn-success btn-lg btn-block"><a href="http://localhost:5000/search">Retournez à la page de recherche</a></button>
+
+{% endblock %}
